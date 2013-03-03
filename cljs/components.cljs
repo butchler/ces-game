@@ -1,9 +1,11 @@
 (ns game.components)
 
-(def *image-path* "./images")
-
-(defn image [file]
-  {:image (apply str *image-path* "/" file)})
+(defn renderable [render-fn]
+  {:renderable {:fn render-fn}})
 
 (defn position [x y]
   {:position {:x x, :y y}})
+
+(defn image [url]
+  {:image {:url url}})
+

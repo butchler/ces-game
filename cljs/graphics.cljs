@@ -24,7 +24,7 @@
         height (.-height (.-canvas brush))]
     (.clearRect brush 0 0 width height)))
 
-(defn fill-rect [brush x y width height color]
+(defn fill-rect [brush color x y width height]
   (.save brush)
 
   (set! (.-fillStyle brush) color)
@@ -39,3 +39,4 @@
 
 (defn draw-image [brush image x y]
   (.drawImage brush image x y))
+

@@ -12,14 +12,14 @@
 (def *cell-height* 40)
 
 (def letters
-  {"#" (c/image "block.png")
-   "p" (c/image "player.png")})
+  {"#" (c/image "images/block.png")
+   "p" (c/image "images/player.png")})
 
 (defn load-entity [letter x y]
-  (let [entity (letters letter)
-        entity-with-position (merge entity (c/position x y))]
+  (let [entity (letters letter)]
     (when-not (nil? entity)
-      entity-with-position)))
+      (let [entity-with-position (merge entity (c/position x y))]
+        entity-with-position))))
 
 (defn load-row [row-index row]
   (remove nil?  (map-indexed
