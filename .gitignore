@@ -13,3 +13,6 @@ pom.xml.asc
 
 .repl
 out
+
+resources/js/game.js
+resources/js/test.js
